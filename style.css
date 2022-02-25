@@ -1,0 +1,46 @@
+body {
+  background-color: black;
+}
+
+div {
+  box-sizing: border-box;
+  width: 420px;
+  height: 220px;
+}
+
+.cont {
+  position: absolute;
+  top: calc(50% - 110px);
+  left: calc(50% - 210px);
+  box-reflect: below 2px linear-gradient(to bottom, transparent 45%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.int {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 200px;
+  text-align: center;
+  font-size: 60px;
+  font-family: Papyrus, serif;
+  color: cyan;
+  text-shadow: 0px 0px 15px cyan;
+  box-shadow: 0px 0px 30px cyan inset;
+  border-radius: 30px;
+  border: solid 10px cyan;
+  outline: 0px solid transparent;
+  animation: float 2s ease-in-out 0s infinite alternate;
+}
+
+@keyframes float {
+  from {
+    text-shadow: 0px 0px 15px cyan;
+    box-shadow: 0px 0px 30px cyan inset;
+  }
+  to {
+    transform: translateY(-10px);
+    text-shadow: 0px 0px 25px cyan,
+                 0px 0px 15px cyan;
+    box-shadow: 0px 0px 50px cyan inset;
+  }
+}
